@@ -161,7 +161,7 @@ a {
 }
 @media (max-width: 500px) {
   .container {
-    width: 99%;
+    width: 100%;
   }
 }
 .container .navbar {
@@ -170,17 +170,27 @@ a {
   background: #ececec;
   padding: 1.5% 0%;
 }
+@media (max-width: 500px) {
+  .container .navbar {
+    justify-content: flex-start;
+  }
+}
 .container .navbar nav {
   width: 45%;
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .container .navbar nav {
+    width: 100%;
+  }
 }
 .container .navbar nav a {
   font-size: 1.6rem;
 }
 @media (max-width: 500px) {
   .container .navbar nav a {
-    font-size: 0.2rem;
+    font-size: 1rem;
   }
 }
 .container h1 {
@@ -188,7 +198,6 @@ a {
 }
 .container .name-info {
   display: flex;
-  text-align: justify;
   justify-content: center;
   padding: 5% 0;
   background: #f8f8f8;
@@ -210,12 +219,24 @@ a {
   background-color: white;
   padding-bottom: 5%;
 }
+@media (max-width: 500px) {
+  .container .second-section {
+    flex-wrap: wrap;
+  }
+}
 .container .second-section .who,
 .container .second-section .skills {
   border: solid #b9b9b9 0.05rem;
   width: 45%;
   padding: 1% 8% 1% 1%;
   background-color: white;
+}
+@media (max-width: 500px) {
+  .container .second-section .who,
+  .container .second-section .skills {
+    width: 97%;
+    padding: 1%;
+  }
 }
 .container .second-section .who h2,
 .container .second-section .skills h2 {
@@ -241,6 +262,11 @@ a {
   width: 95%;
   margin: 1rem auto;
 }
+@media (max-width: 500px) {
+  .container .test .backcon .work-cont {
+    width: 100%;
+  }
+}
 .container .test .backcon .wh {
   font-size: 3rem;
   padding-bottom: 0.5rem;
@@ -248,6 +274,13 @@ a {
 .container .test .backcon .work {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container .test .backcon .work {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0%;
+  }
 }
 .container .test .backcon .work li {
   font-size: 1.5rem;
@@ -285,4 +318,10 @@ a {
 .container .copy {
   text-align: center;
   font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  ul {
+    width: 40%;
+    margin-bottom: 3%;
+  }
 }

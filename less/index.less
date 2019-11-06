@@ -175,8 +175,8 @@ a {
 .container {
   width: 70%;
   margin: 1rem auto;
-	@media (max-width: 500px) {
-    width: 99%;
+  @media (max-width: 500px) {
+    width: 100%;
   }
 
   .navbar {
@@ -185,26 +185,33 @@ a {
     // .bordered();
     background: #ececec;
     padding: 1.5% 0%;
+    @media (max-width: 500px) {
+      justify-content: flex-start;
+    }
 
     nav {
       // .bordered();
       width: 45%;
       display: flex;
       justify-content: space-around;
+      @media (max-width: 500px) {
+        width: 100%;
+      }
       a {
         font-size: 1.6rem;
-				@media (max-width: 500px) {
-          font-size: .2rem;
+        @media (max-width: 500px) {
+          font-size: 1rem;
         }
       }
     }
   }
+
   h1 {
     font-size: 5rem;
   }
   .name-info {
     display: flex;
-    text-align: justify;
+    //text-align: justify;
     justify-content: center;
     // .bordered();
     padding: 5% 0;
@@ -228,12 +235,20 @@ a {
     // .bordered();
     background-color: white;
     padding-bottom: 5%;
+    @media (max-width: 500px) {
+      flex-wrap: wrap;
+    }
     .who,
     .skills {
       border: solid rgb(185, 185, 185) 0.05rem;
       width: 45%;
       padding: 1% 8% 1% 1%;
       .backwhite();
+      @media (max-width: 500px) {
+        width: 97%;
+        padding: 1%;
+        //font-size: 1rem;
+      }
 
       h2 {
         font-size: 2.5rem;
@@ -250,22 +265,33 @@ a {
   .test {
     width: 95%;
     margin: 0 auto;
+    // .bordered();
 
     .backcon {
       border: solid rgb(185, 185, 185) 0.05rem;
+
       .work-cont {
         width: 95%;
         margin: 1rem auto;
-        // .bordered();
+        @media (max-width: 500px) {
+          width: 100%
+        }
+        
       }
       .wh {
         font-size: 3rem;
         padding-bottom: 0.5rem;
+        
       }
       .work {
         display: flex;
         // .bordered();
         justify-content: space-between;
+        @media (max-width: 500px) {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 0%;
+        }
         li {
           font-size: 1.5rem;
           line-height: 1.8rem;
@@ -313,11 +339,18 @@ a {
         margin-top: 2rem;
       }
     }
-	}
-	.copy {
-		text-align: center;
-		font-size: 1.2rem
-	}
+  }
+  .copy {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
 
 
+
+@media (max-width: 500px) {
+  ul {
+    width: 40%;
+    margin-bottom:3%;
+  }
+}
