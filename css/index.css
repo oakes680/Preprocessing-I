@@ -146,90 +146,143 @@ body {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+.drop {
+  border: 1px solid black;
+  padding: 0.6rem 3rem;
+  background-color: #ffffff;
+}
 .container {
   width: 70%;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
-.navbar {
+@media (max-width: 500px) {
+  .container {
+    width: 99%;
+  }
+}
+.container .navbar {
   display: flex;
   justify-content: flex-end;
   background: #ececec;
   padding: 1.5% 0%;
 }
-nav {
+.container .navbar nav {
   width: 45%;
   display: flex;
   justify-content: space-around;
 }
-h1 {
+.container .navbar nav a {
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .container .navbar nav a {
+    font-size: 0.2rem;
+  }
+}
+.container h1 {
   font-size: 5rem;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-nav a {
-  font-size: 2rem;
-}
-.name-info {
+.container .name-info {
   display: flex;
   text-align: justify;
   justify-content: center;
   padding: 5% 0;
   background: #f8f8f8;
+  margin-bottom: 3%;
 }
-.spacing10 {
-  margin-top: 5%;
-}
-.name-just h2,
-.name-just h3 {
+.container .name-info .name-just h2,
+.container .name-info .name-just h3 {
   font-size: 2rem;
 }
-.drop {
-  border: 1px solid black;
-  padding: 0.6rem 3rem;
-  background-color: white;
+.container .name-info .spacing10 {
+  margin-top: 5%;
 }
-.sac-space {
+.container .name-info .spacing10 .sac-space {
   margin-bottom: 1.6rem;
 }
-.second-section {
+.container .second-section {
   display: flex;
   justify-content: space-around;
-  background-color: #f8f8f8;
+  background-color: white;
   padding-bottom: 5%;
 }
-.who {
+.container .second-section .who,
+.container .second-section .skills {
   border: solid #b9b9b9 0.05rem;
   width: 45%;
-  padding: 1% 17% 1% 1%;
+  padding: 1% 8% 1% 1%;
   background-color: white;
 }
-.who h2 {
+.container .second-section .who h2,
+.container .second-section .skills h2 {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
-.who p {
+.container .second-section .who p,
+.container .second-section .skills p {
   font-size: 1.5rem;
 }
-.skills {
-  border: solid #b9b9b9 0.05rem;
-  width: 45%;
-  padding: 1% 17% 1% 1%;
-  background-color: white;
+.container .second-section .who li,
+.container .second-section .skills li {
+  font-size: 1.4rem;
 }
-.skills h2 {
-  font-size: 2.5rem;
-}
-.skills p {
-  font-size: 1.5rem;
-}
-.wh {
-  font-size: 3rem;
-}
-.work {
-  display: flex;
-}
-.work-cont {
+.container .test {
   width: 95%;
   margin: 0 auto;
+}
+.container .test .backcon {
+  border: solid #b9b9b9 0.05rem;
+}
+.container .test .backcon .work-cont {
+  width: 95%;
+  margin: 1rem auto;
+}
+.container .test .backcon .wh {
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+}
+.container .test .backcon .work {
+  display: flex;
+  justify-content: space-between;
+}
+.container .test .backcon .work li {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.container .container2 {
+  background: #f8f8f8;
+  margin: 3rem 0;
+  padding: 3rem 0;
+}
+.container .container2 .subcontainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .container2 .subcontainer input[type='text'],
+.container .container2 .subcontainer select,
+.container .container2 .subcontainer textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.container .container2 .subcontainer label {
+  padding: 1.2rem 1.2rem 1.2rem 0;
+  display: inline-block;
+  font-size: 2rem;
+}
+.container .container2 .subcontainer input[type='submit']:hover {
+  background-color: #bebebe;
+}
+.container .container2 .subcontainer .margin-top10 {
+  margin-top: 2rem;
+}
+.container .copy {
+  text-align: center;
+  font-size: 1.2rem;
 }
