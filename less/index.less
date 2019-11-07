@@ -4,56 +4,351 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+/******************       Mixins     *************** */
+.bordered() {
+  border: 2px red solid;
+}
+.backwhite() {
+  background-color: white;
+}
+
+// **************Variables ********************
+
+@bg-white: #ffffff;
+@ff: 'Roboto', sans-serif;
+
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.drop {
+  border: 1px solid black;
+  padding: 0.6rem 3rem;
+  font-size: 1rem;
+  background-color: @bg-white;
+  // .backwhite();
+}
+
+// ************         container      ******************
+.container {
+  width: 70%;
+  margin: 1rem auto;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    // .bordered();
+    background: #ececec;
+    padding: 1.5% 0%;
+    @media (max-width: 500px) {
+      justify-content: flex-start;
+    }
+
+    nav {
+      // .bordered();
+      width: 45%;
+      display: flex;
+      justify-content: space-around;
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+      a {
+        font-size: 1.6rem;
+        @media (max-width: 500px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+  .name-info {
+    display: flex;
+    //text-align: justify;
+    justify-content: center;
+    // .bordered();
+    padding: 5% 0;
+    background: #f8f8f8;
+    margin-bottom: 3%;
+    .name-just h2,
+    .name-just h3 {
+      font-size: 2rem;
+    }
+    .spacing10 {
+      margin-top: 5%;
+
+      .sac-space {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  //  ******************Second Section******************************
+
+  .second-section {
+    display: flex;
+    justify-content: space-around;
+    // .bordered();
+    background-color: white;
+    padding-bottom: 5%;
+    @media (max-width: 500px) {
+      flex-wrap: wrap;
+    }
+    .who,
+    .skills {
+      border: solid rgb(185, 185, 185) 0.05rem;
+      width: 45%;
+      padding: 1% 8% 1% 1%;
+      .backwhite();
+      @media (max-width: 500px) {
+        width: 97%;
+        padding: 1%;
+        //font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      li {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  /* *******************   work    ******************/
+  .test {
+    width: 95%;
+    margin: 0 auto;
+    // .bordered();
+
+    .backcon {
+      border: solid rgb(185, 185, 185) 0.05rem;
+
+      .work-cont {
+        width: 95%;
+        margin: 1rem auto;
+        @media (max-width: 500px) {
+          width: 100%
+        }
+        
+      }
+      .wh {
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+        
+      }
+      .work {
+        display: flex;
+        // .bordered();
+        justify-content: space-between;
+        @media (max-width: 500px) {
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 0%;
+        }
+        li {
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+
+    /* *******************   contact form   ******************/
+  .container2 {
+    background: #f8f8f8;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    .subcontainer {
+      width: 90%;
+      margin: 0 auto;
+      input[type='text'],
+      select,
+      textarea {
+        width: 100%;
+        padding: 1.2rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+
+      label {
+        padding: 1.2rem 1.2rem 1.2rem 0;
+        display: inline-block;
+        font-size: 2rem;
+      }
+
+
+      input[type='submit']:hover {
+        background-color: #bebebe;
+      }
+      .margin-top10 {
+        margin-top: 2rem;
+      }
+    }
+  }
+  .copy {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  ul {
+    width: 40%;
+    margin-bottom:3%;
+  }
+}

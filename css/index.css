@@ -1,1 +1,330 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/******************       Mixins     *************** */
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.drop {
+  border: 1px solid black;
+  padding: 0.6rem 3rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+.container {
+  width: 70%;
+  margin: 1rem auto;
+  /* *******************   work    ******************/
+  /* *******************   contact form   ******************/
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+.container .navbar {
+  display: flex;
+  justify-content: flex-end;
+  background: #ececec;
+  padding: 1.5% 0%;
+}
+@media (max-width: 500px) {
+  .container .navbar {
+    justify-content: flex-start;
+  }
+}
+.container .navbar nav {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .container .navbar nav {
+    width: 100%;
+  }
+}
+.container .navbar nav a {
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .container .navbar nav a {
+    font-size: 1rem;
+  }
+}
+.container h1 {
+  font-size: 5rem;
+}
+.container .name-info {
+  display: flex;
+  justify-content: center;
+  padding: 5% 0;
+  background: #f8f8f8;
+  margin-bottom: 3%;
+}
+.container .name-info .name-just h2,
+.container .name-info .name-just h3 {
+  font-size: 2rem;
+}
+.container .name-info .spacing10 {
+  margin-top: 5%;
+}
+.container .name-info .spacing10 .sac-space {
+  margin-bottom: 1.6rem;
+}
+.container .second-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .container .second-section {
+    flex-wrap: wrap;
+  }
+}
+.container .second-section .who,
+.container .second-section .skills {
+  border: solid #b9b9b9 0.05rem;
+  width: 45%;
+  padding: 1% 8% 1% 1%;
+  background-color: white;
+}
+@media (max-width: 500px) {
+  .container .second-section .who,
+  .container .second-section .skills {
+    width: 97%;
+    padding: 1%;
+  }
+}
+.container .second-section .who h2,
+.container .second-section .skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.container .second-section .who p,
+.container .second-section .skills p {
+  font-size: 1.5rem;
+}
+.container .second-section .who li,
+.container .second-section .skills li {
+  font-size: 1.4rem;
+}
+.container .test {
+  width: 95%;
+  margin: 0 auto;
+}
+.container .test .backcon {
+  border: solid #b9b9b9 0.05rem;
+}
+.container .test .backcon .work-cont {
+  width: 95%;
+  margin: 1rem auto;
+}
+@media (max-width: 500px) {
+  .container .test .backcon .work-cont {
+    width: 100%;
+  }
+}
+.container .test .backcon .wh {
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+}
+.container .test .backcon .work {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .container .test .backcon .work {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0%;
+  }
+}
+.container .test .backcon .work li {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.container .container2 {
+  background: #f8f8f8;
+  margin: 3rem 0;
+  padding: 3rem 0;
+}
+.container .container2 .subcontainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.container .container2 .subcontainer input[type='text'],
+.container .container2 .subcontainer select,
+.container .container2 .subcontainer textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.container .container2 .subcontainer label {
+  padding: 1.2rem 1.2rem 1.2rem 0;
+  display: inline-block;
+  font-size: 2rem;
+}
+.container .container2 .subcontainer input[type='submit']:hover {
+  background-color: #bebebe;
+}
+.container .container2 .subcontainer .margin-top10 {
+  margin-top: 2rem;
+}
+.container .copy {
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  ul {
+    width: 40%;
+    margin-bottom: 3%;
+  }
+}
